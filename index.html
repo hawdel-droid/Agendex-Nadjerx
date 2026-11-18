@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Agenda Hawdel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hd">
+      <div>
+        <h1 id="ti"></h1>
+        <p class="sub" id="su"></p>
+      </div>
+      <button class="new" id="add">Novo compromisso</button>
+    </div>
+
+    <div class="bar" aria-hidden="true"><i id="pg"></i></div>
+
+    <div class="nav">
+      <button class="arr" id="pv" aria-label="Semana anterior">‹</button>
+      <div id="strip"></div>
+      <button class="arr" id="nx" aria-label="Próxima semana">›</button>
+    </div>
+
+    <button class="hj" id="hj" hidden>Voltar para hoje</button>
+
+    <div id="list"></div>
+
+    <p class="ft">
+      As aulas são fixas e não podem ser editadas. O que você adiciona fica salvo neste aparelho.
+      <a href="https://trello.com/b/4BkJQB2F/rotina-nadjer" target="_blank" rel="noopener">Abrir o Trello</a>
+    </p>
+  </main>
+
+  <dialog id="dlg">
+    <div class="f">
+      <h2 id="dt">Novo compromisso</h2>
+
+      <label>O que é
+        <input type="text" id="ft" maxlength="80">
+      </label>
+
+      <label>Tipo
+        <select id="fk">
+          <option value="estudo">Estudo</option>
+          <option value="design">Design</option>
+          <option value="volei">Vôlei</option>
+          <option value="treino">Treino</option>
+          <option value="rotina">Rotina</option>
+          <option value="outro">Outro</option>
+        </select>
+      </label>
+
+      <div class="two">
+        <label>Início <input type="time" id="fs" value="10:00"></label>
+        <label>Fim <input type="time" id="fe" value="11:00"></label>
+      </div>
+
+      <label class="chk">
+        <input type="checkbox" id="fr"> Repetir toda semana
+      </label>
+      <div class="chips" id="fd" hidden></div>
+
+      <p id="er" role="alert"></p>
+
+      <div class="act">
+        <button id="del" hidden>Excluir</button>
+        <button id="cx">Cancelar</button>
+        <button id="sv" class="pri">Salvar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
